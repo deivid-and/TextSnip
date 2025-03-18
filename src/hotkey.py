@@ -3,7 +3,7 @@ import subprocess
 
 def trigger_screenshot():
     print("\n📸 Hotkey detected! Capturing screen...")
-    subprocess.run(["python3", "src/screenshot.py"]) 
+    subprocess.run(["python", "src/screenshot.py"]) 
 
 def start_hotkey_listener():
     hotkey = "shift+tab"
