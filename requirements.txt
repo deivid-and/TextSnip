@@ -5,3 +5,5 @@ pyperclip # pyperclip to copy text to clipboard
 keyboard # Listen for global hotkeys
 pynput # Listen for global hotkeys
 pyqt6 # for GUI
+numpy
+opencv-python
