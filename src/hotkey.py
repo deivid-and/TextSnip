@@ -1,17 +1,25 @@
-# import keyboard
-# import subprocess
-# import sys
+import json
+import keyboard
+import subprocess
+import sys
 
-# def trigger_screenshot():
-#     print("\n📸 Hotkey detected! Capturing screen...")
-#     subprocess.run([sys.executable, "src/screenshot.py"])
+CONFIG_FILE = "config.json"
 
-# def start_hotkey_listener():
-#     hotkey = "shift+tab"
-#     keyboard.add_hotkey(hotkey, trigger_screenshot)
-#     print(f"🎧 Listening for hotkey: {hotkey}... (Press ESC to exit)")
+def load_hotkey():
+    try:
+        with open(CONFIG_FILE, "r") as f:
+            config = json.load(f)
+            return config.get("hotkey", "shift+tab")
+    except FileNotFoundError:
+        return "shift+tab"
 
-#     keyboard.wait("esc")
+def trigger_screenshot():
+    print("\nHotkey detected! Capturing screen...")
+    subprocess.run([sys.executable, "src/screenshot.py"])
 
-# if __name__ == "__main__":
-#     start_hotkey_listener()
+def start_hotkey_listener():
+    hotkey = load_hotkey()
+    keyboard.add_hotkey(hotkey, trigger_screenshot)
+    print(f"Listening for hotkey: {hotkey}... (Press ESC to exit)")
+
+    keyboard.wait("esc") 
