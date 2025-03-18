@@ -1,17 +1,16 @@
 import numpy as np
 import cv2
 import pyautogui
+import subprocess
 
-# Take a full-screen screenshot
 image = pyautogui.screenshot()
 image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
-cv2.imwrite("screenshot.png", image)
+cv2.imwrite("src/screenshot.png", image)
 
 drawing = False  
 x1, y1, x2, y2 = -1, -1, -1, -1  
 
 def draw_rectangle(event, x, y, flags, param):
-    """Handles mouse events for drawing a selection rectangle."""
     global x1, y1, x2, y2, drawing, image
 
     if event == cv2.EVENT_LBUTTONDOWN:
@@ -31,20 +30,20 @@ def draw_rectangle(event, x, y, flags, param):
         x1, x2 = min(x1, x2), max(x1, x2)
         y1, y2 = min(y1, y2), max(y1, y2)
 
-        crop_and_save()
+        crop_and_process()
 
-def crop_and_save():
-    """Crops the selected region and saves it."""
+def crop_and_process():
     global x1, y1, x2, y2, image
 
     if x1 < x2 and y1 < y2:
         cropped_img = image[y1:y2, x1:x2].copy()  
-        cv2.imwrite("cropped.png", cropped_img)
-        cv2.imshow("Cropped Image", cropped_img)
-        print("Cropped image saved as cropped.png")
+        cv2.imwrite("src/cropped.png", cropped_img)
+
+        cv2.destroyAllWindows()
+
+        subprocess.run(["python3", "src/ocr.py"])
 
 cv2.imshow("Select Region", image)
 cv2.setMouseCallback("Select Region", draw_rectangle)
-
 cv2.waitKey(0)
-cv2.destroyAllWindows()
+cv2.destroyAllWindows() 

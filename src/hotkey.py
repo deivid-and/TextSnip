@@ -1,13 +1,15 @@
 import keyboard
+import subprocess
 
 def trigger_screenshot():
-    print("Hotkey pressed!") 
+    print("\n📸 Hotkey detected! Capturing screen...")
+    subprocess.run(["python3", "src/screenshot.py"]) 
 
 def start_hotkey_listener():
-    hotkey = "shift+tab" 
+    hotkey = "shift+tab"
     keyboard.add_hotkey(hotkey, trigger_screenshot)
-    print(f"Listening for hotkey: {hotkey}... (Press ESC to exit)")
-    # Keep the script running
+    print(f"🎧 Listening for hotkey: {hotkey}... (Press ESC to exit)")
+
     keyboard.wait("esc")
 
 if __name__ == "__main__":
