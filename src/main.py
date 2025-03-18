@@ -1,6 +1,7 @@
 import subprocess
 import json
 import keyboard
+import sys
 
 CONFIG_FILE = "config.json"
 
@@ -14,7 +15,7 @@ def load_hotkey():
 
 def trigger_screenshot():
     print("\n📸 Hotkey detected! Capturing screen...")
-    subprocess.run(["python", "src/screenshot.py"])
+    subprocess.run([sys.executable, "src/screenshot.py"])
 
 def start_hotkey_listener():
     hotkey = load_hotkey()

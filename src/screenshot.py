@@ -1,4 +1,5 @@
 import platform
+import sys
 import subprocess
 
 
@@ -10,7 +11,7 @@ def capture_screenshot():
     else:
         print("❌ Unsupported OS")
 
-    subprocess.run(["python", "src/ocr.py"]) 
+    subprocess.run([sys.executable, "src/ocr.py"])
 
 if __name__ == "__main__":
     capture_screenshot()
