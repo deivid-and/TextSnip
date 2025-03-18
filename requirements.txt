@@ -1,9 +1,5 @@
-mss # for screenshots
-pyautogui # for region selection in screenshots
-pytesseract # for OCR text extraction
-pyperclip # pyperclip to copy text to clipboard
-keyboard # Listen for global hotkeys
-pynput # Listen for global hotkeys
-pyqt6 # for GUI
-numpy
-opencv-python
+PyQt5 # Required for the UI
+pytesseract # Required for OCR
+opencv-python # Required for image processing
+keyboard # Required for keyboard input
+pyperclip # Required for clipboard input
