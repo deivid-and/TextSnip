@@ -14,7 +14,7 @@ def load_hotkey():
         return "shift+tab" 
 
 def trigger_screenshot():
-    print("\n📸 Hotkey detected! Capturing screen...")
+    print("\n Hotkey detected! Capturing screen...")
     subprocess.run([sys.executable, "src/screenshot.py"])
 
 def start_hotkey_listener():

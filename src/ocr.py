@@ -15,7 +15,7 @@ def extract_text(image_path="src/cropped.png"):
 if __name__ == "__main__":
     extracted_text = extract_text()
     if extracted_text:
-        print(f"📝 Extracted Text:\n{extracted_text}")
+        print(f"Extracted Text:\n{extracted_text}")
         subprocess.run([sys.executable, "src/clipboard.py", extracted_text])
 
     else:
