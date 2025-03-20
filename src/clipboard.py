@@ -9,4 +9,4 @@ if __name__ == "__main__":
         text_to_copy = " ".join(sys.argv[1:])
         copy_to_clipboard(text_to_copy)
     else:
-        print("⚠️ No text received for copying.")
+        print("ERROR: No text received for copying.")

@@ -4,7 +4,6 @@ import subprocess
 import sys
 import os
 
-# Use Tesseract from the project folder
 LOCAL_TESSERACT = os.path.join(os.getcwd(), "Tesseract-OCR", "tesseract.exe")
 
 if os.path.exists(LOCAL_TESSERACT):

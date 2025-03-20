@@ -1,7 +1,5 @@
 PyQt5 # Required for the UI
-# pytesseract # Required for OCR
+pytesseract # Required for OCR
 opencv-python # Required for image processing
 keyboard # Required for keyboard input
 pyperclip # Required for clipboard input
-paddleocr # Required for OCR
-paddlepaddle # Required for paddleocr

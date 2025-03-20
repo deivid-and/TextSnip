@@ -37,7 +37,7 @@ def capture_screenshot():
         print("Removed processed screenshot")
 
     else:
-        print("⚠️ No new screenshot found. Try again.")
+        print("ERROR: No new screenshot found. Try again.")
 
 if __name__ == "__main__":
     capture_screenshot()
