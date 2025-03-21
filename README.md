@@ -39,7 +39,7 @@ Paste it anywhere using Ctrl+V.
 
 ### **2. Accessing the Settings**
 Right-click the TextSnip icon in the system tray.
-Click Settings to change the hotkey or enable startup launch.
+Click Settings to change the hotkey.
 
 ## **Important Notes**
 Windows Snipping Tool must be set to Win + Shift + S for screenshots.
