@@ -6,6 +6,4 @@ __pycache__/
 *.pyo
 *.pyd
 
-*.png
-
 config.json
