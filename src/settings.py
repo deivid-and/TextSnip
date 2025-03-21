@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import (
     QApplication, QWidget, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, 
     QCheckBox, QComboBox
 )
-from PyQt5.QtGui import QFont
+from PyQt5.QtGui import QFont, QIcon
 
 CONFIG_FILE = "config.json"
 HOTKEY_OPTIONS = [
@@ -15,12 +15,17 @@ HOTKEY_OPTIONS = [
     "Ctrl+Alt+T"
 ]
 
+ICON_PATH = os.path.join(os.getcwd(), "assets", "icon.png")
+
 class SettingsUI(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("TextSnip Settings")
         self.setGeometry(100, 100, 280, 160)
         self.setStyleSheet("background-color: #f0f0f0; padding: 10px;")
+
+        if os.path.exists(ICON_PATH):
+            self.setWindowIcon(QIcon(ICON_PATH))
 
         layout = QVBoxLayout()
         self.hotkey_label = QLabel("Select Hotkey:")
