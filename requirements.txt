@@ -1,5 +1,8 @@
-PyQt5 # Required for the UI
-pytesseract # Required for OCR
-opencv-python # Required for image processing
-keyboard # Required for keyboard input
-pyperclip # Required for clipboard input
+PyQt5  # Required for the UI
+pytesseract  # Required for OCR
+opencv-python  # Required for image processing
+keyboard  # Required for keyboard input
+pyperclip  # Required for clipboard input
+pyautogui  # Required for taking screenshots
+Pillow  # Required for handling images
+pystray  # Required for system tray integration
