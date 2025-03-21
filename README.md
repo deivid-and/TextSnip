@@ -32,7 +32,7 @@ python src/main.py
 ## **Usage**
 
 ### **1. Take a Screenshot & Extract Text**
-Press the hotkey (default: Alt+Tab).
+Press the hotkey (default: Alt+Shift).
 Select a screenshot region.
 TextSnip extracts the text and copies it to your clipboard.
 Paste it anywhere using Ctrl+V.
