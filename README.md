@@ -44,5 +44,6 @@ Click Settings to change the hotkey.
 ## **Important Notes**
 Windows Snipping Tool must be set to Win + Shift + S for screenshots.
 If you use a different screenshot shortcut, update it in src/screenshot.py.
-Open Source & Contributions
+
+## **Open Source & Contributions
 This project is open-source and built to improve productivity. Feel free to contribute, suggest improvements, or customize it to fit your needs.
