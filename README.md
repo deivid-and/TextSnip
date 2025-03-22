@@ -12,7 +12,7 @@ Currently only Windows version is available. MacOS in progress...
 
 ### **1. Clone the Project**
 ```bash
-git clone https://github.com/your-repo/TextSnip.git
+https://github.com/deivid-and/TextSnip.git
 cd TextSnip
 ```
 ### **2. Create and Activate a Virtual Environment**
