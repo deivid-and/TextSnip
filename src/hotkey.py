@@ -9,9 +9,9 @@ def load_hotkey():
     try:
         with open(CONFIG_FILE, "r") as f:
             config = json.load(f)
-            return config.get("hotkey", "alt+shit")
+            return config.get("hotkey", "alt+shift")
     except FileNotFoundError:
-        return "alt+shit"
+        return "alt+shift"
 
 def trigger_screenshot():
     print("\nHotkey detected! Capturing screen...")
